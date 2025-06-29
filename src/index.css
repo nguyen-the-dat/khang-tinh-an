@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @layer base {
+	html {
+		font-family: 'Proxima Nova', system-ui, sans-serif;
+	}
+} */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.dancing-font {
+    font-family: "dancingscript";
+  }
+  
+  @font-face {
+    font-family: "dancingscript";
+    src: local("dancingscript"),
+      url("./assets/fonts/DancingScript.ttf") format("truetype");
+  }
+  
+  .montserrat-font {
+    font-family: "montserrat";
+  }
+  
+  @font-face {
+    font-family: "montserrat";
+    src: local("montserrat"),
+      url("./assets/fonts/Montserrat.ttf") format("truetype");
+  }
+  
+  .colatin-font {
+    font-family: "colatin";
+  }
+  
+  @font-face {
+    font-family: "colatin";
+    src: local("colatin"),
+      url("./assets/fonts/MTD-Colatin.otf") format("truetype");
+  }
+  
+  .title {
+    @apply text-[36px] font-bold leading-[48px] tracking-[0em];
+  }
+  
+  .pulse-opacity animation {
+    opacity: 0.213862;
+    transform: scale(1.08015);
+  }
+  
+  .img-container {
+    @apply absolute w-28 h-28 bg-[#422f1e] flex justify-center items-center opacity-20 rounded-full z-10;
+  }
+  
+  @keyframes moveLeft {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes moveRight {
+    from {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animation-move-left {
+    animation: moveLeft 0.8s ease-out forwards;
+  }
+  
+  .animation-move-right {
+    animation: moveRight 0.8s ease-out forwards;
+  }
+  
+  .animation-pulse-opacity {
+    opacity: 0.2;
+    animation: pulse-opacity 1.5s linear infinite;
+  }
+  
+  @keyframes pulse-opacity {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+  }
+  
+  .bean-motion-1 {
+    offset-path: path(
+      "M171.617 1.48242C137.635 76.7144 66 44.999 36 55.9993C6 66.9995 1.64822 82.146 1.64822 82.146"
+    );
+    offset-rotate: 350deg;
+    animation: moveAlong 3s ease-in-out forwards;
+    position: absolute;
+    width: 56px;
+    height: auto;
+    z-index: 99;
+  }
+  
+  .bean-motion-2 {
+    offset-path: path(
+      "M1.29688 1.69336C53.1774 93.6787 248.733 -14.6328 312.221 82.2264"
+    );
+    offset-rotate: 350deg;
+    animation: moveAlong 3s ease-in-out forwards;
+    position: absolute;
+    width: 56px;
+    height: auto;
+    z-index: 99;
+  }
+  
+  .bean-motion-3 {
+    offset-path: path(
+      "M354 1C285.588 118.746 109 26 0.999996 73"
+    );
+    offset-rotate: 350deg;
+    animation: moveAlong 3s ease-in-out forwards;
+    position: absolute;
+    width: 56px;
+    height: auto;
+    z-index: 99;
+  }
+
+  .bean-motion-1-mobile {
+    offset-path: path(
+      "M4.99982 1C-6.5004 37 16.5001 96 73 117.5"
+    );
+    offset-rotate: 350deg;
+    animation: moveAlong 3s ease-in-out forwards;
+    position: absolute;
+    width: 56px;
+    height: auto;
+    z-index: 99;
+  }
+
+  .bean-motion-2-mobile {
+    offset-path: path(
+      "M2 1C77.187 131.917 66.7736 437.565 21.5918 581"
+    );
+    offset-rotate: 350deg;
+    animation: moveAlong 3s ease-in-out forwards;
+    position: absolute;
+    width: 56px;
+    height: auto;
+    z-index: 99;
+  }
+  
+  
+  @keyframes moveAlong {
+    from {
+      offset-distance: 0%;
+    }
+    to {
+      offset-distance: 100%;
+    }
+  }
+  
+  @layer utilities {
+    .animate-slide-down {
+      animation: slideDown 1s ease forwards;
+    }
+  
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0%);
+      }
+    }
+  }
+  
+  .animation-open {
+    width: 100px;
+    height: 100px;
+    animation: open 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes open {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
