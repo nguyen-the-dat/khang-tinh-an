@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import contact from '../data/contact';
+import { Link } from 'react-router-dom';
 
 const title = [
 	'Về chúng tôi',
@@ -44,9 +45,11 @@ function Header() {
 							</a>
 						))}
 					</div>
-					<button className=" py-2 px-6 rounded-xl cursor-pointer bg-[#3E790A] text-white font-medium hover:scale-105 hover:duration-300">
-						Giỏ hàng
-					</button>
+					<Link to="/cart">
+						<button className="px-5 py-2 rounded-xl bg-[#3E790A] text-white">
+							Giỏ hàng
+						</button>
+					</Link>
 					<div className="flex gap-6">
 						{contact.map((item) => (
 							<a href={item.link}>

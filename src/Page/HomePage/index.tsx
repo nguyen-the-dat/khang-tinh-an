@@ -10,12 +10,12 @@ interface IconButtonProps {
 }
 import styles from './styles.module.css';
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTiktok } from 'react-icons/bi';
+import Chatbot from '../../Components/Chatbot/Chatbot';
 
 const HomePage = () => {
 	const location = useLocation();
 	const isHomePage = location.pathname === '/' ? 'main' : 'sub';
 	const [collapsed, setCollapsed] = useState(false);
-
 	const toggleCollapsed = () => {
 		setCollapsed(!collapsed);
 	};
@@ -27,8 +27,10 @@ const HomePage = () => {
 
 	return (
 		<>
-			<ChatBox />
-			<div className="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
+			<Chatbot />
+
+			{/* khoi facebook, instagram, tiktok o góc dưới bên phải */}
+			{/* <div className="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
 				<a
 					href="https://www.facebook.com/profile.php?id=61577276590314"
 					target="_blank"
@@ -53,14 +55,17 @@ const HomePage = () => {
 				>
 					<IconButton Icon={BiLogoTiktok} customColor="#333" />
 				</a>
-			</div>
+			</div> */}
+
 			<div className="relative bg-[#FEFAF5]">
 				<Header
 					type={isHomePage}
 					toggleCollapsed={toggleCollapsed}
 					collapsed={collapsed}
 				/>
-				<Outlet />
+				<main className="pt-[120px]">
+					<Outlet />
+				</main>
 				<Footer />
 			</div>
 		</>
@@ -75,3 +80,6 @@ const IconButton: React.FC<IconButtonProps> = ({ Icon, customColor }) => (
 		<Icon className={`${styles.iconWhite}`} />
 	</div>
 );
+
+
+

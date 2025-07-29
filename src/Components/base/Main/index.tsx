@@ -1,3 +1,4 @@
+import GreenNutriGrid from '../../GreenNutriGrid';
 import ProductSlider from '../ProductSlider';
 
 const Main = () => {
@@ -116,6 +117,8 @@ const Main = () => {
 					</div>
 				</div>
 			</div>
+
+			<GreenNutriGrid/>
 		</>
 	);
 };

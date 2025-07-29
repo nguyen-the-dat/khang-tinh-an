@@ -148,9 +148,11 @@ const SubNavBar = (props: IProps) => {
 							</div>
 							<div className="ml-6 justify-around flex-1 basis-[30%] hidden lg:block">
 								<div className="flex items-center justify-center">
-									<button className="px-5 py-2 rounded-xl bg-[#3E790A] text-white">
-										Giỏ hàng
-									</button>
+									<Link to="/cart">
+										<button className="px-5 py-2 rounded-xl bg-[#3E790A] text-white">
+											Giỏ hàng
+										</button>
+									</Link>
 									<a
 										href="https://www.facebook.com/profile.php?id=61577276590314"
 										target="_blank"
