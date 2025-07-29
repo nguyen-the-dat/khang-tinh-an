@@ -343,7 +343,12 @@ const NavBar = (props: IProps) => {
 								{item.name}
 							</Link>
 						))}
-
+						<Link
+							to="gio-hang"
+							className="text-white px-5 py-[6px] text-xs"
+						>
+							Giỏ hàng
+						</Link>
 						<div className="bg-white h-[1px] w-[15vw] my-10"></div>
 						<div>
 							<a
