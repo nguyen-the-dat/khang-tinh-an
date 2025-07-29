@@ -18,16 +18,17 @@ const Header = (props: IProps) => {
 
 	// Kiểm tra các path không muốn hiển thị banner
 	const hideBanner =
-		location.pathname === '/process' ||
-		location.pathname === '/products' ||
-		location.pathname === '/cart' ||
-		location.pathname === '/check-out' ||
-		location.pathname === '/check-out/order-success' ||
+		location.pathname === '/nguoi-tao-nen-san-pham' ||
+		location.pathname === '/gio-hang' ||
+		location.pathname === '/thanh-toan' ||
+		location.pathname === '/thanh-toan/thanh-cong' ||
+		location.pathname.startsWith('/san-pham') ||
 		isProductDetail;
 
 	return (
-		<div>
-			<div>
+		<>
+			{/* Phần Navigation fixed */}
+			<div className="fixed top-0 left-0 w-full z-50 bg-[#FEFAF5] shadow-md">
 				{type === 'main' && (
 					<NavBar
 						toggleCollapsed={toggleCollapsed}
@@ -42,17 +43,20 @@ const Header = (props: IProps) => {
 				)}
 			</div>
 
-			{/* Chỉ hiển thị banner nếu không nằm trong danh sách loại trừ */}
-			{!hideBanner && (
-				<div className="flex justify-center mt-16">
-					<img
-						src={'/banner.jpg'}
-						className="w-full object-cover"
-						alt="Banner"
-					/>
-				</div>
-			)}
-		</div>
+			{/* Thêm padding-top để nội dung không bị che */}
+			<div className="pt-[80px]">
+				{/* Chỉ hiển thị banner nếu không nằm trong danh sách loại trừ */}
+				{!hideBanner && (
+					<div className="flex justify-center">
+						<img
+							src={'/banner.jpg'}
+							className="w-full object-cover"
+							alt="Banner"
+						/>
+					</div>
+				)}
+			</div>
+		</>
 	);
 };
 

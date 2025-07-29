@@ -1,26 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useVisibleOnScroll } from '../hooks/useVisibleOnScroll';
 
-function Characteristics() {
-	const { ref, visible } = useVisibleOnScroll();
-	return (
-		<div className="flex flex-col items-center relative overflow-hidden">
-			<div ref={ref}>
-				<img
-					alt="hanh-fuck"
-					src="/lam-voi-dam-me.png"
-					className={`transition-opacity duration-700 animation-move-left w-52 ${
-						visible ? 'animation-move-left' : 'opacity-0'
-					}`}
-				/>
-			</div>
-
-			<Feature />
-		</div>
-	);
-}
-export default Characteristics;
-
 const Content = ({
 	title,
 	description,
@@ -48,7 +28,9 @@ const Content = ({
 					className="md:w-[500px] md:h-[400px] w-[380px] h-[360px]"
 				/>
 				<div className="font-medium w-[300px] md:w-[380px] translate-y-[-21em] md:translate-y-[-23em] translate-x-[3em] md:-translate-x-[-4em]">
-					<span className="dancing-font text-3xl">{featureTitle || "Bạn có biết ?"}</span>
+					<span className="dancing-font text-3xl">
+						{featureTitle || 'Bạn có biết ?'}
+					</span>
 					<div className="md:text-[14px] text-xs mt-2">
 						{description}
 					</div>
@@ -58,14 +40,24 @@ const Content = ({
 	);
 };
 
-const Feature = () => {
+export const Feature = () => {
 	return (
 		<div className="flex flex-col translate-x-[-4em]">
-			<Feature1 />
-			<Feature2 />
-			<Feature3 />
-			<Feature4 />
-			<Feature5 />
+			<div data-feature="feature1">
+				<Feature1 />
+			</div>
+			<div data-feature="feature2">
+				<Feature2 />
+			</div>
+			<div data-feature="feature3">
+				<Feature3 />
+			</div>
+			<div data-feature="feature4">
+				<Feature4 />
+			</div>
+			<div data-feature="feature5">
+				<Feature5 />
+			</div>
 		</div>
 	);
 };

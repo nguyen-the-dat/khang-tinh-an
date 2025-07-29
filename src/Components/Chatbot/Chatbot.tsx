@@ -23,7 +23,7 @@ export default function Chatbot() {
 	const generateBotResponse = async (history: ChatItem[]) => {
 		const updateHistory = (text: string, isError = false) => {
 			setChatHistory((prev) => [
-				...prev.filter((msg) => msg.text !== 'Thinking...'),
+				...prev.filter((msg) => msg.text !== 'Đang nghĩ...'),
 				{ role: 'model', text, isError },
 			]);
 		};
@@ -108,9 +108,9 @@ export default function Chatbot() {
 					<div className="flex items-end gap-3">
 						<ChatbotIcons />
 						<p className="bg-green-100 text-base px-4 py-3 rounded-xl">
-							Hey there,
+							Xin chào,
 							<br />
-							How can I help you today?
+							Tôi có thể giúp gì cho bạn?
 						</p>
 					</div>
 

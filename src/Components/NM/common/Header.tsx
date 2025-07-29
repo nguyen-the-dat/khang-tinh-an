@@ -45,7 +45,7 @@ function Header() {
 							</a>
 						))}
 					</div>
-					<Link to="/cart">
+					<Link to="/gio-hang">
 						<button className="px-5 py-2 rounded-xl bg-[#3E790A] text-white">
 							Giỏ hàng
 						</button>

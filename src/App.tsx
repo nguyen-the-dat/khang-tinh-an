@@ -10,32 +10,48 @@ import ProductDetailPage1 from './Page/ProductDetailScreen/index1';
 import CartPage from './Page/CartPage';
 import CheckoutPage from './Page/CheckoutPage';
 import OrderSuccessPage from './Page/OrderSuccessPage';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// Import CartProvider
+import { CartProvider } from './context/CartContext';
 const App: React.FC = () => {
 	return (
 		<div className="App">
-			<Router>
-				<ScrollToTop />
-				<Routes>
-					<Route path="/" element={<HomePage />}>
-						<Route index element={<Main />} />
+			<ToastContainer position="top-right" autoClose={2000} />
 
-						<Route path="products" element={<ProductScreen />} />
+			<CartProvider>
+				<Router>
+					<ScrollToTop />
+					<Routes>
+						<Route path="/" element={<HomePage />}>
+							<Route index element={<Main />} />
 
-						<Route
-							path="/products/:san-pham"
-							element={<ProductDetailPage />}
-						/>
-						<Route path="process" element={<Process />} />
-						<Route path="/cart" element={<CartPage />} />
-						<Route path="/check-out" element={<CheckoutPage />} />
-						<Route
-							path="/check-out/order-success"
-							element={<OrderSuccessPage />}
-						/>
-					</Route>
-				</Routes>
-			</Router>
+							<Route
+								path="san-pham"
+								element={<ProductScreen />}
+							/>
+
+							<Route
+								path="/san-pham/:san-pham"
+								element={<ProductDetailPage />}
+							/>
+							<Route
+								path="/nguoi-tao-nen-san-pham"
+								element={<Process />}
+							/>
+							<Route path="/gio-hang" element={<CartPage />} />
+							<Route
+								path="/thanh-toan"
+								element={<CheckoutPage />}
+							/>
+							<Route
+								path="/thanh-toan/thanh-cong"
+								element={<OrderSuccessPage />}
+							/>
+						</Route>
+					</Routes>
+				</Router>
+			</CartProvider>
 		</div>
 	);
 };

@@ -36,7 +36,7 @@ export const ChatForm: React.FC<ChatFormProps> = ({
 		setTimeout(() => {
 			setChatHistory((history) => [
 				...history,
-				{ role: 'model', text: 'Thinking...' },
+				{ role: 'model', text: 'Đang nghĩ...' },
 			]);
 
 			generateBotResponse([

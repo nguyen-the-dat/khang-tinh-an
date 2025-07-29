@@ -1,5 +1,3 @@
-
-
 import { FaFacebookF, FaFacebookMessenger, FaYoutube } from 'react-icons/fa';
 import { MdLocationOn, MdPhone, MdEmail } from 'react-icons/md';
 
@@ -10,26 +8,23 @@ export default function Footer() {
 				{/* CÔNG TY */}
 				<div>
 					<h2 className="text-2xl font-bold uppercase leading-snug">
-						Công Ty Cổ Phần TNHH
-					
-						WorkMatch
+						Công Ty Cổ Phần TNHH KHÁNG TINH AN
 					</h2>
 					<div className="mt-6 space-y-4 text-base md:text-lg">
 						<div className="flex items-start gap-2">
 							<MdLocationOn className="text-2xl mt-1" />
 							<p>
-								16 Cầu Giấy, Quận Cầu Giấy, Hà Nội
-								<br />
-								Hanoi 100000 Hanoi · 28 km
+								Số nhà 152 Tổ 12 Phường Bắc Kạn, tỉnh Thái
+								Nguyên
 							</p>
 						</div>
 						<div className="flex items-center gap-2">
 							<MdPhone className="text-2xl" />
-							<p>(84) 343789588 - (84) 83869696</p>
+							<p>+84 918 755 632</p>
 						</div>
 						<div className="flex items-center gap-2">
 							<MdEmail className="text-2xl" />
-							<p>WorkMatch.hotrokhachhang@gmail.com</p>
+							<p>khangtinhan.cskh@gmail.com</p>
 						</div>
 					</div>
 					<div className="flex gap-5 mt-6 text-2xl">

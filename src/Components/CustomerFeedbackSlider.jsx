@@ -6,11 +6,16 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const feedbackImages = [
-	'/feedbacks/f1.jpg',
-	'/feedbacks/f1.jpg',
-	'/feedbacks/f1.jpg',
-	'/feedbacks/f1.jpg',
-	'/feedbacks/f1.jpg',
+	'/Feedback/IMG_2944.PNG',
+	'/Feedback/IMG_2945.PNG',
+	'/Feedback/IMG_2946.PNG',
+	'/Feedback/IMG_2947.PNG',
+	'/Feedback/IMG_2949.PNG',
+	'/Feedback/IMG_2950.PNG',
+	'/Feedback/IMG_2951.PNG',
+	'/Feedback/IMG_2955.PNG',
+	'/Feedback/IMG_2957.PNG',
+	'/Feedback/IMG_2958.PNG',
 ];
 
 export default function CustomerFeedbackSlider() {
@@ -38,11 +43,11 @@ export default function CustomerFeedbackSlider() {
 			>
 				{feedbackImages.map((img, idx) => (
 					<SwiperSlide key={idx}>
-						<div className="rounded-xl overflow-hidden shadow-md bg-white">
+						<div className="rounded-xl overflow-hidden shadow-md bg-white flex justify-center items-center p-6">
 							<img
 								src={img}
 								alt={`Feedback ${idx + 1}`}
-								className="w-full h-auto object-cover"
+								className="max-h-80 w-auto object-contain"
 							/>
 						</div>
 					</SwiperSlide>

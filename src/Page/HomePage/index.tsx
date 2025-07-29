@@ -29,41 +29,13 @@ const HomePage = () => {
 		<>
 			<Chatbot />
 
-			{/* khoi facebook, instagram, tiktok o góc dưới bên phải */}
-			{/* <div className="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
-				<a
-					href="https://www.facebook.com/profile.php?id=61577276590314"
-					target="_blank"
-					title="Facebook"
-					className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-blue-100"
-				>
-					<IconButton Icon={BiLogoFacebook} customColor="#333" />
-				</a>
-
-				<a
-					href="https://www.instagram.com/khangtinhan2605/ "
-					target="_blank"
-					title="Zalo"
-					className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-blue-100"
-				>
-					<IconButton Icon={BiLogoInstagram} customColor="#333" />
-				</a>
-
-				<a
-					href="https://www.tiktok.com/@user734347781176129?lang=en"
-					className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-green-100"
-				>
-					<IconButton Icon={BiLogoTiktok} customColor="#333" />
-				</a>
-			</div> */}
-
 			<div className="relative bg-[#FEFAF5]">
 				<Header
 					type={isHomePage}
 					toggleCollapsed={toggleCollapsed}
 					collapsed={collapsed}
 				/>
-				<main className="pt-[120px]">
+				<main className="pt-[30px]">
 					<Outlet />
 				</main>
 				<Footer />
@@ -80,6 +52,3 @@ const IconButton: React.FC<IconButtonProps> = ({ Icon, customColor }) => (
 		<Icon className={`${styles.iconWhite}`} />
 	</div>
 );
-
-
-

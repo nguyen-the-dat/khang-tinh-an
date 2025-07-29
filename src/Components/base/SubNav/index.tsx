@@ -6,7 +6,7 @@ import { classNames } from '../../../util';
 import styles from './styles.module.css';
 import {
 	BiLogoFacebook,
-	BiLogoInstagram,
+	BiLogoYoutube,
 	BiLogoTiktok,
 	BiSolidDashboard,
 } from 'react-icons/bi';
@@ -148,7 +148,7 @@ const SubNavBar = (props: IProps) => {
 							</div>
 							<div className="ml-6 justify-around flex-1 basis-[30%] hidden lg:block">
 								<div className="flex items-center justify-center">
-									<Link to="/cart">
+									<Link to="/gio-hang">
 										<button className="px-5 py-2 rounded-xl bg-[#3E790A] text-white">
 											Giỏ hàng
 										</button>
@@ -168,7 +168,7 @@ const SubNavBar = (props: IProps) => {
 										className="inline-block mx-2 xl:mr-4"
 									>
 										<IconButton
-											Icon={BiLogoInstagram}
+											Icon={BiLogoTiktok}
 											customColor="#333"
 										/>
 									</a>
@@ -177,7 +177,7 @@ const SubNavBar = (props: IProps) => {
 										className="inline-block mx-2 xl:mr-4"
 									>
 										<IconButton
-											Icon={BiLogoTiktok}
+											Icon={BiLogoYoutube}
 											customColor="#333"
 										/>
 									</a>
@@ -216,6 +216,13 @@ const SubNavBar = (props: IProps) => {
 								</Link>
 							))}
 
+							<Link
+								to="/gio-hang"
+								className="text-white px-5 py-[6px] text-xs flex items-center gap-1 hover:opacity-80"
+							>
+								Giỏ hàng
+							</Link>
+
 							<div className="bg-white h-[1px] w-[15vw] my-10"></div>
 							<div>
 								<a
@@ -233,7 +240,7 @@ const SubNavBar = (props: IProps) => {
 									className="inline-block mx-2 xl:mr-4"
 								>
 									<IconButton
-										Icon={BiLogoInstagram}
+										Icon={BiLogoTiktok}
 										customColor="#333"
 									/>
 								</a>
@@ -242,7 +249,7 @@ const SubNavBar = (props: IProps) => {
 									className="inline-block mx-2 xl:mr-4"
 								>
 									<IconButton
-										Icon={BiLogoTiktok}
+										Icon={BiLogoYoutube}
 										customColor="#333"
 									/>
 								</a>

@@ -2,12 +2,12 @@ export const navigation = [
 	{ name: 'Về chúng tôi', href: '#', current: true },
 	{
 		name: 'Sản phẩm',
-		href: '/products',
+		href: '/san-pham',
 		current: true,
 	},
 	{
 		name: 'Gặp gỡ người tạo nên sản phẩm',
-		href: '/process',
+		href: '/nguoi-tao-nen-san-pham',
 		current: true,
 	},
 	{ name: 'Liên hệ chúng tôi', href: '#', current: false },
