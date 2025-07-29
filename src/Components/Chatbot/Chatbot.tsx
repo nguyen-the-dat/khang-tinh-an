@@ -68,17 +68,17 @@ export default function Chatbot() {
 
 	return (
 		<>
-			{/* Toggle Button - Luôn hiển thị */}
+			{/* Nút toggle luôn hiển thị */}
 			<button
 				onClick={() => showChatbot((prev) => !prev)}
-				className="fixed bottom-8 right-8 bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center transition-transform duration-200 z-[60]"
+				className="fixed bottom-6 right-6 bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center transition-transform duration-200 z-[60]"
 			>
 				{chatbot ? <IoClose size={24} /> : <BsChatDots size={22} />}
 			</button>
 
-			{/* Chat Window */}
+			{/* Cửa sổ chat */}
 			<div
-				className={`fixed bottom-[90px] right-8 bg-white rounded-xl shadow-lg w-[420px] overflow-hidden transform transition-all duration-200 z-[50] ${
+				className={`fixed bottom-[90px] right-6 bg-white rounded-xl shadow-lg w-[420px] max-w-[90vw] h-[560px] max-h-[80vh] overflow-hidden transform transition-all duration-200 z-[50] ${
 					chatbot
 						? 'scale-100 opacity-100 pointer-events-auto'
 						: 'scale-75 opacity-0 pointer-events-none'
@@ -103,7 +103,7 @@ export default function Chatbot() {
 				{/* Body */}
 				<div
 					ref={chatbodyRef}
-					className="h-[460px] overflow-y-auto px-6 py-4 flex flex-col gap-5 mb-20 scroll-smooth scrollbar-thin scrollbar-thumb-gray-300"
+					className="h-[calc(100%-120px)] overflow-y-auto px-6 py-4 flex flex-col gap-5 mb-20 scroll-smooth scrollbar-thin scrollbar-thumb-gray-300"
 				>
 					<div className="flex items-end gap-3">
 						<ChatbotIcons />
