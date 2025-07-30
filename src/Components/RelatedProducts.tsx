@@ -1,5 +1,6 @@
 import React from 'react';
 import { products } from '../productData';
+
 interface ProductInfoProps {
 	productId: number;
 }
@@ -14,6 +15,7 @@ export default function RelatedProducts({ productId }: ProductInfoProps) {
 		.slice(0, 3);
 
 	console.log('Related Products:', randomProducts);
+
 	return (
 		<div className="py-10 px-4 sm:px-6 md:px-20 bg-[#FFF8F2]">
 			<div className="max-w-[1440px] mx-auto flex flex-col md:flex-row gap-10">
@@ -34,7 +36,10 @@ export default function RelatedProducts({ productId }: ProductInfoProps) {
 				{/* Danh sách sản phẩm */}
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full md:w-2/3">
 					{randomProducts.map((product) => {
-						const oldPrice = Math.round(product.price * 1.2); // 120%
+						// Đảm bảo product.price là số hợp lệ
+						const price = typeof product.price === 'number' ? product.price : 0;
+						const oldPrice = Math.round(price * 1.2); // 120%
+
 						return (
 							<div
 								key={product.id}
@@ -54,8 +59,7 @@ export default function RelatedProducts({ productId }: ProductInfoProps) {
 										Giá gốc {oldPrice.toLocaleString()}đ
 									</p>
 									<p className="text-sm sm:text-base text-gray-800 font-semibold">
-										Khuyến mãi{' '}
-										{product.price.toLocaleString()}đ
+										Khuyến mãi {price.toLocaleString()}đ
 									</p>
 								</div>
 							</div>
