@@ -141,19 +141,27 @@ export default function CheckoutPage() {
 						className="mt-1 w-6 h-6 cursor-pointer accent-green-600"
 					/>
 					<p className="text-sm sm:text-base leading-snug">
-						Bằng việc nhấn vào nút thanh toán tức bạn đã đồng ý với
-						các{' '}
-						<a href="#" className="text-green-600 underline">
+						Bằng việc nhấn vào nút thanh toán tức bạn đã đồng ý với{' '}
+						<button
+							onClick={() => navigate('/chinh-sach-mua-hang')}
+							className="text-green-600 underline hover:text-green-700"
+						>
 							chính sách mua hàng
-						</a>
+						</button>
 						,{' '}
-						<a href="#" className="text-green-600 underline">
+						<button
+							onClick={() => navigate('/chinh-sach-mua-hang')}
+							className="text-green-600 underline hover:text-green-700"
+						>
 							thanh toán
-						</a>{' '}
+						</button>{' '}
 						và{' '}
-						<a href="#" className="text-green-600 underline">
+						<button
+							onClick={() => navigate('/chinh-sach-mua-hang')}
+							className="text-green-600 underline hover:text-green-700"
+						>
 							bảo mật thông tin
-						</a>
+						</button>
 						.
 					</p>
 				</div>

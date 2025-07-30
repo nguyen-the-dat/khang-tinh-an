@@ -98,45 +98,51 @@ export const products = [
 	{
 		id: 3,
 		name: 'Cà phê tinh bột kháng',
-		price: 175000,
+		price: 249000,
 		image: './product-image/pid3.png',
+		weight : 'Hộp 200gr (20 gói x 10g)'
 	},
 	{
 		id: 4,
 		name: 'Tinh bột kháng Kháng Tinh An vị chuối',
-		price: 175000,
+		price: 275000,
 		image: './product-image/pid4.png',
+		weight : 'Hộp 200gr (20 gói x 10g)'
 	},
 	{
 		id: 5,
 		name: 'Tinh bột kháng Kháng Tinh An vị dâu',
-		price: 155000,
+		price: 269000,
 		image: './product-image/pid5.png',
+		weight : 'Hộp 200gr (20 gói x 10g)'
 	},
 	{
 		id: 6,
 		name: 'Tinh bột kháng Kháng Tinh An vị cacao',
-		price: 140000,
+		price: 249000,
 		image: './product-image/pid6.png',
+		weight : 'Hộp 200gr (20 gói x 10g)'
 	},
 	{
 		id: 7,
 		name: 'Tinh bột kháng Kid',
-		price: 210000,
+		price: 229000,
 		image: './product-image/pid7.png',
+		weight : 'Hộp 200gr (20 gói x 5g)'
 	},
 	,
 	{
 		id: 8,
 		name: 'Tinh bột kháng Plus',
-		price: 260000,
+		price: 350000,
 		image: './product-image/pid8.png',
+		weight : 'Hộp 200gr (20 gói x 10g)'
 	},
 	,
 	{
 		id: 9,
 		name: 'Combo yêu thương',
-		price: 320000,
 		image: './product-image/pid9.png',
+		weight : 'Inbox nhận tư vấn'
 	},
 ];

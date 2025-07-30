@@ -20,6 +20,7 @@ const Header = (props: IProps) => {
 	const hideBanner =
 		location.pathname === '/nguoi-tao-nen-san-pham' ||
 		location.pathname === '/gio-hang' ||
+		location.pathname === '/chinh-sach-mua-hang' ||
 		location.pathname === '/thanh-toan' ||
 		location.pathname === '/thanh-toan/thanh-cong' ||
 		location.pathname.startsWith('/san-pham') ||
