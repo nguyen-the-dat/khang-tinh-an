@@ -15,6 +15,8 @@ import 'react-toastify/dist/ReactToastify.css';
 // Import CartProvider
 import { CartProvider } from './context/CartContext';
 import Policy from './Page/Policy';
+import PolicyPayment from './Page/Policy-Payment';
+import SecurityPolicy from './Page/SecurityPolicy';
 const App: React.FC = () => {
 	return (
 		<div className="App">
@@ -44,6 +46,14 @@ const App: React.FC = () => {
 							<Route
 								path="/chinh-sach-mua-hang"
 								element={<Policy />}
+							/>
+							<Route
+								path="/chinh-sach-thanh-toan"
+								element={<PolicyPayment />}
+							/>
+							<Route
+								path="/chinh-sach-bao-mat"
+								element={<SecurityPolicy />}
 							/>
 							<Route
 								path="/thanh-toan"

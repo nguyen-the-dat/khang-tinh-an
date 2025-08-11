@@ -54,10 +54,21 @@ function ProductScreen() {
 									className="bg-[#F2E6D4] rounded-lg shadow-lg overflow-hidden flex flex-col h-full"
 								>
 									{/* Product Image (full width, no padding) */}
-									<img
+									{/* <img
 										src={product.image}
 										alt={product.name}
 										className="w-full h-[220px] object-cover"
+									/> */}
+
+									<img
+										src={product.image}
+										alt={product.name}
+										className="
+    w-full object-cover object-center
+    h-[220px]
+    max-sm:h-[300px]         
+    max-sm:object-[50%_10%]  
+  "
 									/>
 
 									{/* Product Content */}

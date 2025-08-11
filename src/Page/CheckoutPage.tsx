@@ -150,14 +150,14 @@ export default function CheckoutPage() {
 						</button>
 						,{' '}
 						<button
-							onClick={() => navigate('/chinh-sach-mua-hang')}
+							onClick={() => navigate('/chinh-sach-thanh-toan')}
 							className="text-green-600 underline hover:text-green-700"
 						>
 							thanh toán
 						</button>{' '}
 						và{' '}
 						<button
-							onClick={() => navigate('/chinh-sach-mua-hang')}
+							onClick={() => navigate('/chinh-sach-bao-mat')}
 							className="text-green-600 underline hover:text-green-700"
 						>
 							bảo mật thông tin

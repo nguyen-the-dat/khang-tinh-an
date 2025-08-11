@@ -14,7 +14,7 @@ const PrivacyPolicy: React.FC = () => {
 				</h2>
 				<ul className="list-decimal pl-6 space-y-3">
 					<li>
-						Quý khách vào Website <b>cocoonvietnam.com</b> xin vui
+						Quý khách vào Website <b>khangtinhan.online</b> xin vui
 						lòng đọc kỹ quy định và các chính sách được công bố trên
 						trang web. Quý khách tham khảo thêm tại mục{' '}
 						<b>
@@ -114,7 +114,7 @@ const PrivacyPolicy: React.FC = () => {
 				</h2>
 				<p>
 					Mọi tranh chấp liên quan đến giao dịch tại Website
-					cocoonvietnam.com sẽ ưu tiên thương lượng, hòa giải. Nếu
+					khangtinhan.online sẽ ưu tiên thương lượng, hòa giải. Nếu
 					không thành công sẽ được giải quyết tại Trọng tài hoặc Tòa
 					án theo pháp luật Việt Nam.
 				</p>
@@ -124,7 +124,7 @@ const PrivacyPolicy: React.FC = () => {
 			<section>
 				<h2 className="text-xl font-semibold mb-4">5. Luật áp dụng</h2>
 				<p>
-					Mọi điều khoản và giao dịch tại Website cocoonvietnam.com
+					Mọi điều khoản và giao dịch tại Website khangtinhan.online
 					được điều chỉnh theo pháp luật Việt Nam. Nếu có điều khoản
 					không hợp pháp, phần còn lại vẫn giữ nguyên hiệu lực.
 				</p>

@@ -8,7 +8,7 @@ export default function Footer() {
 				{/* CÔNG TY */}
 				<div>
 					<h2 className="text-2xl font-bold uppercase leading-snug">
-						Công Ty Cổ Phần TNHH KHÁNG TINH AN
+						Công Ty TNHH KHÁNG TINH AN
 					</h2>
 					<div className="mt-6 space-y-4 text-base md:text-lg">
 						<div className="flex items-start gap-2">

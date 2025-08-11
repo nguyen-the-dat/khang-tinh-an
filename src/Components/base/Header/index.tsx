@@ -21,6 +21,8 @@ const Header = (props: IProps) => {
 		location.pathname === '/nguoi-tao-nen-san-pham' ||
 		location.pathname === '/gio-hang' ||
 		location.pathname === '/chinh-sach-mua-hang' ||
+		location.pathname === '/chinh-sach-thanh-toan' ||
+		location.pathname === '/chinh-sach-bao-mat' ||
 		location.pathname === '/thanh-toan' ||
 		location.pathname === '/thanh-toan/thanh-cong' ||
 		location.pathname.startsWith('/san-pham') ||
